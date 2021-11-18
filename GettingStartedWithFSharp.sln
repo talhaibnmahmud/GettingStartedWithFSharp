@@ -7,6 +7,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "GettingStartedWithFSharp", 
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Calculator", "Calculator\Calculator.fsproj", "{7D87B97F-1F50-4AF1-ADF3-556B1B2544E2}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Card Game", "Card Game\Card Game.fsproj", "{9F8FE208-FD4B-4F1E-82D4-CD27C57D746A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7D87B97F-1F50-4AF1-ADF3-556B1B2544E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D87B97F-1F50-4AF1-ADF3-556B1B2544E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D87B97F-1F50-4AF1-ADF3-556B1B2544E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F8FE208-FD4B-4F1E-82D4-CD27C57D746A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F8FE208-FD4B-4F1E-82D4-CD27C57D746A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F8FE208-FD4B-4F1E-82D4-CD27C57D746A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F8FE208-FD4B-4F1E-82D4-CD27C57D746A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
