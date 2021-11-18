@@ -17,10 +17,18 @@ let suit (number: int) : string =
     else "Clubs"
 
 
+let shuffle list = 
+    let random = System.Random()
+    list |> List.sortBy(fun _x -> random.Next())
+
+
+let printCard card = printfn "%s of %s" (cardDescription card) (suit card)
+let printAll list = List.iter(fun x -> printCard(x)) list
+let take (no:int) (list) = List.take no list
+
+
 [<EntryPoint>]
 let main _argv = 
-    let cards = [ 1; 10; 2; 34 ]
-    for card in cards do
-        printfn "%s of %s" (cardDescription(card)) (suit(card))
-
+    let cards = [ 1; 2; 3; 7; 9; 10; 21; 23; 34 ]
+    cards |> shuffle |> take 3 |> printAll
     0
