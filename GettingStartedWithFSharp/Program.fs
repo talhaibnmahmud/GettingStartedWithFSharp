@@ -103,3 +103,39 @@ while not quit do
         printfn "You guessed correctly %i is the secret number!" number
     else
         printfn "%i is incorrect" guess
+
+
+// Finctions
+let add a b =  a + b
+
+let addAndMultiply a b c =                                  // No return keyword
+    let sum = a + b
+    let product = sum * c
+    product                                                 // The last line is the return
+
+// Calling a function
+printfn "%i" (addAndMultiply 2 3 3)                         // 15
+
+// Infered types
+let sum = add 2 2 
+// let concat = add "hello" "world"                         // will give compilation error
+
+
+// Functional patterns
+
+// Composition
+let addComposed a = a + 2
+let multiplyComposed a = a * 3
+//let addMultiply a = 
+//    let sum = addComposed a
+//    let product = addAndMultiply sum
+//    product
+let addMultiply = addComposed >> addAndMultiply
+// addMultiply 2                                            // 12
+
+// Pipeline
+let myList = [4; 3; 2; 1]
+let sort (list: int list) = List.sort list
+let print (list: int list) = List.iter(fun x -> printfn "Item %i " x) list
+myList |> sort |> print
+
