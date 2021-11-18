@@ -10,22 +10,27 @@ let name = "Talha"
 let mutable age = 23
 age <- 24                                                   // Allowed
 
+
 // Variable types
 let university = "KUET"                                     // String
 let moneyLeft = 25.75                                       // Float
 let isDesert = true                                         // Bool
 
+
 // Printing to the console
 printfn "Hello, I'm learning F#"
+
 
 // Foramtting
 printfn $"Name: {name}, University: {university}"
 printfn "I have %f Taka left" moneyLeft
 
+
 // Read from the Console
 System.Console.Write "Type something: "
 let str = System.Console.ReadLine()
 printfn "You typed %s" str
+
 
 // Convert between data types
 let first = "57"
@@ -51,6 +56,7 @@ let cardValue = 1
 let cardDescription = if cardValue = 1 then "Ace" elif cardValue = 14 then "Ace" else "A Card"
 printfn "%s" cardDescription
 
+
 // Branching Exercise
 let cardNo = 12
 let cardName = 
@@ -60,3 +66,40 @@ let cardName =
     elif cardNo = 13 then "King"
     else string cardNo
 printfn "%s" cardName
+
+
+// Loops
+
+// For...In Loop
+// for <pattern> in <enumerable-expression> do
+//      <body-expression>
+printfn ""
+let list = [1; 2; 3; 4; 5]
+for i in list do
+    printf "%i " i
+
+// For...To Loop
+// for <identifier = start> [to | downto] <finish> do
+//      <body-expression>
+printfn ""
+for i = 1 to 10 do
+    printf "%i " i
+
+printfn ""
+for i = 10 downto 1 do
+    printf "%i " i
+
+
+// While loops
+// while <test-expression> do
+printfn ""
+let mutable quit = false
+let number = 11
+while not quit do
+    printf "Guess a Number: "
+    let guess = int (System.Console.ReadLine())
+    if guess = number then
+        quit <- true
+        printfn "You guessed correctly %i is the secret number!" number
+    else
+        printfn "%i is incorrect" guess
