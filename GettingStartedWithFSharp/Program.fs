@@ -139,3 +139,31 @@ let sort (list: int list) = List.sort list
 let print (list: int list) = List.iter(fun x -> printfn "Item %i " x) list
 myList |> sort |> print
 
+
+// F# Collections
+let logEntryMonday = "first entry"
+let logEntryTuesDay = "second entry"
+let logEntryWednesday = "third entry"
+
+let logEntriesWeek = ["first entry"; "second entry"; "third entry";]
+
+// F# List (Immutable)
+let cards = ["Ace"; "King"; "Queen"]
+let newCards = [
+  "Ace"
+  "King"
+  "Queen"
+]
+// let cards = [ 1, "Ace", "King" ]                         // not permitted
+let numbers = [1 .. 5]                                      // Range based list [1, 2, 3, 4, 5]
+
+let cardList = ["Ace"; "King"; "Queen"]
+let newCardList = "Jack" :: cardList                        // "Ace", "King", "Queen", "Jack"                       
+
+let otherCardList = ["Jack"; "10";]
+let fullCardList = cards @ otherCardList                    // "Ace", "King", "Queen", "Jack", "10"
+
+let appendedList = cards |> List.append ["Jack"]
+let fullList = cards |> List.append otherCardList
+
+printfn $"Head: {fullList.Head}, Tail: {fullList.Tail}, Length: {fullList.Length}, isEmpty: {fullList.IsEmpty}"
